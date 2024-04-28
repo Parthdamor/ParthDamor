@@ -1,0 +1,128 @@
+/* Global variables for consistent styling */
+body {
+    --bg: #fff;
+    --text: #333;
+    --pbg: #f4f4f4;
+    --box: rgba(0, 0, 0, 0.1);
+    --highlight: #007bff;
+    --border: #ddd; /* Default border color */
+
+    /* Basic styling for the body */
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+    transition: background-color 0.5s, color 0.5s, border-color 0.5s; /* Add transition for smooth color change */
+}
+
+/* Styling for the profile container */
+.profile-container {
+    background-color: var(--pbg);
+    box-shadow: 0 0 10px var(--box);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    max-width: 800px;
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid var(--border); /* Set default border color */
+}
+
+/* Styling for user details */
+.user-details {
+    text-align: left;
+}
+
+/* Header styling, including the user name */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Styling for user name, highlighting in a specific color */
+.user-details h1 {
+    color: var(--highlight);
+}
+
+/* Styling for contact information and social media links */
+.contact-info ul,
+.social-media ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li,
+.social-media li {
+    margin-bottom: 10px;
+}
+
+/* Styling for social media icons */
+.social-media img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ddd;
+    padding: 5px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Highlight the social media links on hover */
+.social-media a:hover {
+    color: var(--highlight);
+}
+
+/* Styling for the theme toggle button */
+.theme-toggle {
+    cursor: pointer;
+}
+
+/* Dark mode styling */
+.dark-theme {
+    --bg: #333;
+    --text: #fff;
+    --pbg: #444;
+    --box: rgba(255, 255, 255, 0.1);
+    --highlight: #6c91c2;
+    --border: #555; /* Dark mode border color */
+}
+
+/* Styling for the buttons container */
+.buttons {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    margin-top: 20px; /* Add margin for spacing between buttons and other content */
+}
+
+/* Styling for the edit and save buttons */
+.edit-btn, .save-btn {
+    padding: 10px 20px;
+    margin: 0 10px;
+}
+
+/* ... (previous styles) ... */
+
+/* Styling for the add social media input and button */
+.add-social {
+    margin-top: 20px;
+}
+
+.add-social input {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.add-social button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* ... (previous styles) ... */

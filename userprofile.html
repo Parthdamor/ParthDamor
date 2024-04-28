@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="userprofile/userstyle.css">
+    <title>User Profile</title>
+</head>
+<body>
+
+    <div class="profile-container">
+        <div class="user-details">
+            <div class="header">
+                <h1>User Name</h1>
+                <div class="theme-toggle" onclick="toggleTheme()">💡</div>
+            </div>
+            <p class="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et tristique lectus.</p>
+        </div>
+        <div class="contact-info">
+            <ul>
+                <li><strong>Website:</strong> <a href="https://example.com" target="_blank">example.com</a></li>
+                <li><strong>Number:</strong> +1234567890</li>
+                <li><strong>Email:</strong> user@example.com</li>
+                <li><strong>WhatsApp:</strong> <a href="https://wa.me/1234567890" target="_blank">Message</a></li>
+                <li><strong>Location:</strong> City, Country</li>
+            </ul>
+        </div>
+        <div class="social-media">
+            <ul id="social-links">
+                <!-- Social media links will be dynamically added here -->
+            </ul>
+            <div class="add-social">
+                <input type="text" id="newLink" placeholder="Enter new link">
+                <button onclick="addSocialLink()">Add</button>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="edit-btn" onclick="editProfile()">Edit</button>
+            <button class="save-btn" onclick="saveChanges()">Save</button>
+        </div>
+    </div>
+
+    <script>
+        function editProfile() {
+            // Add your logic for profile editing here
+            alert("Edit functionality to be implemented!");
+        }
+
+        function saveChanges() {
+            // Add your logic for saving changes here
+            alert("Save changes functionality to be implemented!");
+        }
+
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle("dark-theme");
+        }
+
+        function addSocialLink() {
+            const newLinkInput = document.getElementById("newLink");
+            const link = newLinkInput.value.trim();
+
+            if (link !== "") {
+                const socialLinksContainer = document.getElementById("social-links");
+                const li = document.createElement("li");
+                li.innerHTML = `<a href="${link}" target="_blank">${link}</a>`;
+                socialLinksContainer.appendChild(li);
+                newLinkInput.value = ""; // Clear the input field
+            }
+        }
+    </script>
+
+</body>
+</html>

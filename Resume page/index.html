@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>serverhub.tech Resume maker</title>
+    <meta name="description" content="Craft your perfect resume effortlessly with ServerHub.tech – the ultimate,
+     100% free resume maker.
+      Unlock professional opportunities with our intuitive tool. 
+      Seamlessly optimize your job hunt with SEO keywords tailored to enhance your visibility.
+       Start crafting your standout resume today!" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">ServerHub.tech Resume Maker</a>
+                <div class="toggle-menu">&#9776;</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    <section id="using">
+        <div class="container">
+
+            <div class="box-container">
+
+                <div class="box box1">
+                    <div class="text">
+                        <h2 class="topic-heading">buttion 1</h2>
+                        <div id="resume-container"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- resume button -->
+
+    <div class="new-resume">
+        <div class="container-button">
+            <button id="create-button" class="create-button">Create</button>
+        </div>
+    </div>
+
+    <!-- this is a reume button hide scrren -->
+    <div id="new-screen" class="new-screen hidden">
+
+        <div class="resume-header">
+            <h2>Resume Builder</h2>
+
+            <a href="index.html">x</a>
+        </div>
+
+
+        <div class="resume-content">
+
+            <!-- resume nav bar -->
+            <div class="divnav">
+
+                <div class="nav-option-1">
+                    <h3>Personal Details</h3>
+                </div>
+
+                <div class="nav-option-1">
+                    <h3>Education</h3>
+                </div>
+                <div class="nav-option-1">
+                    <h3>Experience</h3>
+                </div>
+                <div class="nav-option-1">
+                    <h3>Skills</h3>
+                </div>
+            </div>
+            <!-- resume right side nav bar -->
+            <div class="rightcontent">
+                <form id="user-form">    
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+
+                    <label for="experience">Experience:</label>
+                    <textarea id="experience" rows="4" required></textarea>
+
+                    <button type="button" onclick="generateResume()">Generate Resume</button>
+                </form>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    </div>
+    <script src="javascript.js"></script>
+
+
+    <footer class="footer-content">
+        <div class="container">
+            <p>&copy; 2024 ServerHub.tech. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
