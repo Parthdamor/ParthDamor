@@ -15,7 +15,7 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-========================================================================================================
+=======================================================================================================
 
 🌍  I actively seek opportunities to expand my knowledge and stay updated with industry best practices.
 <br/>
