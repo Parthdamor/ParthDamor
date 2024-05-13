@@ -18,7 +18,7 @@ Here are some ideas to get you started:
 
 ========================================================================================================================================
 
-🌍  I am a Front-End Developer based in Belgrade, Serbia.
+🌍  I actively seek opportunities to expand my knowledge and stay updated with industry best practices.
 <br/>
 
 ### Skills
