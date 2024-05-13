@@ -203,6 +203,9 @@ section {
   width: 100%;
 }
 
+
+
+
 /* Icon Mate che aa Code Home-sci */
 .home-sci {
   position: absolute;
@@ -397,6 +400,7 @@ span {
 .about-contant p {
   font-size: 1.6rem;
   margin: 2rem 0 3rem;
+  text-align: left;
 }
 
 /* btn btn same text and name hovana lidhe jate colour change thay che */
