@@ -961,3 +961,118 @@ span {
     height: 100%;
   }
 }
+
+/*-------------------------------------- */
+/* Tools Section Styling */
+.tools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: auto;
+  padding: 5rem 9% 2rem;
+  background: var(--bg-color);
+}
+
+.tools .subheading {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.tools-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 100%;
+}
+
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 18rem;
+  background: var(--second-bg-color);
+  border-radius: 1rem;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+  border: 2px solid #ffa500;
+}
+
+.tool-item:hover {
+  transform: scale(1.05);
+}
+
+.tool-item img {
+  width: 6rem;
+  height: 6rem;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  background: #fff;
+  padding: 1rem;
+}
+
+.tool-item .percentage {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--main-color);
+  margin-bottom: 0.5rem;
+}
+
+.tool-item .tool-name {
+  font-size: 1.6rem;
+  color: var(--text-color);
+}
+
+/* Responsive design for tools section */
+@media only screen and (max-width: 768px) {
+  .tools-container {
+    gap: 2rem;
+  }
+
+  .tool-item {
+    width: 10rem;
+    height: 16rem;
+  }
+
+  .tool-item img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .tool-item .percentage {
+    font-size: 2rem;
+  }
+
+  .tool-item .tool-name {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .tools-container {
+    gap: 1.5rem;
+  }
+
+  .tool-item {
+    width: 8rem;
+    height: 14rem;
+  }
+
+  .tool-item img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .tool-item .percentage {
+    font-size: 1.8rem;
+  }
+
+  .tool-item .tool-name {
+    font-size: 1.2rem;
+  }
+}
