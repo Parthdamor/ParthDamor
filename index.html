@@ -101,8 +101,6 @@
    
 
     <!-- About section -->
-  
-    <!-- About section -->
     <section class="about" id="about">
 
         <h2 class="heading">About <span>Me</span></h2>
@@ -143,6 +141,42 @@
                 <a href="javascript:void(0);" id="read-more-btn" class="btn">Read More</a>
             </div>
         </div>
+
+        <!-- Add this CSS to hide the extra content -->
+        <style>
+            #about-text {
+                display: -webkit-box;
+                --webkit-line-clamp: 3;
+                /* Show only 3 lines */
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            #read-more-btn {
+                cursor: pointer;
+            }
+        </style>
+
+        <!-- Add this JavaScript to toggle the full content -->
+        <script>
+            document.getElementById('read-more-btn').addEventListener('click', function () {
+                var aboutText = document.getElementById('about-text');
+                var readMoreBtn = document.getElementById('read-more-btn');
+
+                // Check if the content is fully expanded or not
+                if (aboutText.style.display === "block") {
+                    aboutText.style.display = "-webkit-box";
+                    aboutText.style.webkitLineClamp = "3";
+                    readMoreBtn.textContent = "Read More";
+                } else {
+                    aboutText.style.display = "block";
+                    readMoreBtn.textContent = "Read Less";
+                }
+            });
+        </script>
+
+    </section>
+
 
     <!-- Eduction section  -->
     <section class="education" id="education">
