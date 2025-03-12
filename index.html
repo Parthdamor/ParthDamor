@@ -72,8 +72,80 @@
         <div class="home-contant">
             <h1>Hi, I am <span>Parth Damor</span></h1>
 
-            <div class="text-animate">
-                <h3>Fullstack Developer</h3>
+            <div>
+                <div class="text-animate">
+                    <h3 class="title"></h3>
+                </div>
+
+                <style>
+                    .text-animate {
+                        overflow: hidden;
+                        display: inline-block;
+                        min-height: 40px;
+                        /* Fixed height to prevent jumping */
+                        width: 300px;
+                        /* Fixed width based on longest title */
+                        line-height: 40px;
+                        /* Matches height for vertical centering */
+                        padding: 0 10px;
+                        /* Consistent padding */
+                        box-sizing: border-box;
+                    }
+
+                    .title {
+                        display: inline-block;
+                        font-family: monospace;
+                        white-space: nowrap;
+                        margin: 0;
+                        /* Remove default h3 margin */
+                    }
+                </style>
+
+                <script>
+                    const titles = [
+                        "Fullstack Developer",
+                        "Frontend Developer",
+                        "UI/UX Designer",
+                        "Video Editor"
+                    ];
+                    let currentIndex = 0;
+                    let charIndex = 0;
+                    let isDeleting = false;
+                    const titleElement = document.querySelector('.title');
+
+                    function typeWriter() {
+                        const currentTitle = titles[currentIndex];
+
+                        // Typing phase
+                        if (!isDeleting && charIndex <= currentTitle.length) {
+                            titleElement.textContent = currentTitle.substring(0, charIndex);
+                            charIndex++;
+
+                            if (charIndex > currentTitle.length) {
+                                setTimeout(() => isDeleting = true, 1500); // Longer pause when complete
+                            }
+                        }
+                        // Deleting phase
+                        else if (isDeleting && charIndex >= 0) {
+                            titleElement.textContent = currentTitle.substring(0, charIndex);
+                            charIndex--;
+
+                            if (charIndex < 0) {
+                                isDeleting = false;
+                                currentIndex = (currentIndex + 1) % titles.length;
+                                setTimeout(typeWriter, 300); // Shorter pause before next title
+                                return;
+                            }
+                        }
+
+                        // Speed adjustments
+                        const speed = isDeleting ? 60 : 120; // Slightly slower typing, faster deleting
+                        setTimeout(typeWriter, speed);
+                    }
+
+                    // Start animation
+                    typeWriter();
+                </script>
             </div>
 
             <p>"👨‍💻 I am a full stack developer with a passion for creating dynamic and innovative web applications using the MERN stack (MongoDB, Express.js, React, and Node.js). 🚀
