@@ -107,11 +107,10 @@
     <!-- my project -->
    
 
+   
     <!-- About section -->
     <section class="about" id="about">
-
         <h2 class="heading">About <span>Me</span></h2>
-
 
         <div class="about-img">
             <img src="assets/img/Anime.png" alt="#">
@@ -153,7 +152,7 @@
         <style>
             #about-text {
                 display: -webkit-box;
-                --webkit-line-clamp: 3;
+                -webkit-line-clamp: 3;
                 /* Show only 3 lines */
                 -webkit-box-orient: vertical;
                 overflow: hidden;
@@ -173,16 +172,16 @@
                 // Check if the content is fully expanded or not
                 if (aboutText.style.display === "block") {
                     aboutText.style.display = "-webkit-box";
-                    aboutText.style.webkitLineClamp = "3";
+                    aboutText.style.webkitLineClamp = "3"; // Show only 3 lines
                     readMoreBtn.textContent = "Read More";
                 } else {
-                    aboutText.style.display = "block";
-                    readMoreBtn.textContent = "Read Less";
+                    aboutText.style.display = "block"; // Show full content
+                    readMoreBtn.textContent = "Read Less"; // Change text to "Read Less"
                 }
             });
         </script>
-
     </section>
+
 
 
     <!-- New Section: Exploring the Tools Behind My Design -->
